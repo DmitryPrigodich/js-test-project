@@ -5,7 +5,10 @@
   "description": "js test examples",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "coverage": "c8 npm test",
+    "lint": "eslint ./ --fix",
+    "prepare": "husky install"
   },
   "author": "Dmitry Prigodich",
   "license": "ISC",

@@ -1,8 +1,5 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable max-len */
 /* eslint-disable require-jsdoc */
-
-
+/* eslint-disable max-len */
 export class NumbersValidator {
   /**
    * @param {Number} number number to check
@@ -22,7 +19,8 @@ export class NumbersValidator {
    * @return {Array<Number>} array of even numbers
    */
   getEvenNumbersFromArray(arrayOfNumbers) {
-    if (Array.isArray(arrayOfNumbers) && arrayOfNumbers.every((item) => typeof item === 'number')) {
+    if (Array.isArray(arrayOfNumbers) &&
+        arrayOfNumbers.every((item) => typeof item === 'number')) {
       return arrayOfNumbers.filter(this.isNumberEven);
     }
     throw new Error(`[${arrayOfNumbers}] is not an array of "Numbers"`);

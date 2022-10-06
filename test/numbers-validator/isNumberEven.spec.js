@@ -1,21 +1,30 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable object-curly-spacing */
-/* eslint-disable indent */
-/* eslint-disable max-len */
-/* eslint-disable require-jsdoc */
-
-import { NumbersValidator } from '../../app/NumbersValidator.js';
-import { expect } from 'chai';
+import {NumbersValidator} from '../../app/NumbersValidator.js';
+import {expect} from 'chai';
 
 describe('isNumberEven positive tests', () => {
-    let validator;
+  let validator;
 
-    beforeEach(() => {
-        validator = new NumbersValidator();
-    });
+  beforeEach(() => {
+    validator = new NumbersValidator();
+  });
 
-    it('should return true when provided with an even number', () => {
-        const validationResults = validator.isNumberEven(4);
-        expect(validationResults).to.be.equal(true);
-    });
+  afterEach(() => {
+    validator = null;
+  });
+
+  it('should return true when provided with an even number', () => {
+    const validationResults = validator.isNumberEven(4);
+    expect(validationResults).to.be.equal(true);
+  });
+
+  it('should return false when provided with an odd number', () => {
+    const validationResults = validator.isNumberEven(5);
+    expect(validationResults).to.be.equal(false);
+  });
+
+  it('should throw an error when provided a string', () => {
+    expect(() => {
+      validator.isNumberEven('4');
+    }).to.throw('[4] is not of type "Number" it is of type "string"');
+  });
 });
