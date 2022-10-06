@@ -4,7 +4,7 @@
 /* eslint-disable max-len */
 /* eslint-disable require-jsdoc */
 
-import { NumbersValidator } from '../../app/NumbersValidator';
+import { NumbersValidator } from '../../app/NumbersValidator.js';
 import { expect } from 'chai';
 
 describe('isNumberEven positive tests', () => {

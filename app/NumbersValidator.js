@@ -3,7 +3,7 @@
 /* eslint-disable require-jsdoc */
 
 
-class NumbersValidator {
+export class NumbersValidator {
   /**
    * @param {Number} number number to check
    * @return {Boolean} true if element is even
@@ -28,5 +28,3 @@ class NumbersValidator {
     throw new Error(`[${arrayOfNumbers}] is not an array of "Numbers"`);
   }
 }
-
-module.exports = NumbersValidator;
